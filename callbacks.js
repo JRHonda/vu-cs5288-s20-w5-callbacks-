@@ -1,4 +1,4 @@
-/* Copyright @2020, G. Hemingway - All rights reserved */
+/* Copyright @2020, vucsgrad - All rights reserved */
 "use strict";
 
 let longFunc = (timeout, name, cb) => {
