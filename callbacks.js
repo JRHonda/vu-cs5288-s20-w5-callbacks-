@@ -44,22 +44,19 @@ Expected output -->
  */
 
 const pickFirst = (funcArray, cb) => {
-
+    /*** Add your code here ***/
     var hasFirstTaskExecuted = false;
+    
+    // callback
     const check = () => {
-
         if (!hasFirstTaskExecuted) {
             hasFirstTaskExecuted = true;
             cb();
         }
-
     };
-    /*** Add your code here ***/
-    funcArray.forEach(task => {
-        task(check);
-    });
+    
+    funcArray.forEach(task => task(check));
 };
-
 pickFirst(taskArray, () => {
     console.log('Done with pickFirst');
 });
@@ -75,9 +72,8 @@ Expected output -->
  */
 const waitForMe = (funcArray, cb) => {
     /*** Add your code here ***/
-
     var arrLength = funcArray.length;
-
+    // callback
     const doneCheck = () => { if (--arrLength === 0) cb() };
 
     funcArray.forEach(task => task(doneCheck));
@@ -95,15 +91,13 @@ Expected output -->
 const overAndOver = (dataArray, func, cb) => {
     /*** Add your code here ***/
     var arrLength = dataArray.length;
-
+    // callback
     const doneCheck = () => {
         if (--arrLength === 0) cb();
     };
     dataArray.forEach(ele => {
         func(ele, doneCheck);
     });
-
-
 };
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 overAndOver(array, taskW, () => {
