@@ -116,6 +116,7 @@ Expected output -->
  */
 const onlyWithCaution = (funcArray, cb, errFunc) => {
     /*** Add your code here ***/
+    //Tried but failed. Maybe I just don't get what is being asked to do here.
 };
 onlyWithCaution(errArray, () => {
     console.log("Never going to get here");
